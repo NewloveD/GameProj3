@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze Path Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #00ffdd;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #056c43;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Your Maze File</h2>
+        <form action="/cgi-bin/maze.cgi" method="POST" enctype="multipart/form-data">
+            <label for="mazeFile">Select maze file (.txt):</label>
+            <input type="file" name="mazeFile" id="mazeFile" required>
+            <input type="submit" value="Submit Maze">
+        </form>
+    </div>
+</body>
+</html>
