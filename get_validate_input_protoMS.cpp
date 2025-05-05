@@ -53,17 +53,19 @@ vector<string> getAndValidateMazeInput(const string& mazeFilePath) {
 
     // Display the maze visually on the webpage with style
     cout << "<h3>Maze:</h3>";
+    cout << "<div style=\"font-family: monospace; font-size: 30px; line-height: 1.2;\">";
     for (const string& row : maze) {
-        cout << "<p>";
+        cout << "<div>";
         for (char ch : row) {
             if (ch == 'H') {
-                cout << "<strong>" << ch << "</strong> ";  // Make 'H' bold
+                cout << "<strong>" << ch << "</strong>";
             } else if (ch == 'B') {
-                cout << "<span style='color:darkgreen;'>" << ch << "</span> ";  // 'B' in dark green
+                cout << "<span style='color:darkgreen; font-weight:bold;'>" << ch << "</span>";
             }
         }
-        cout << "</p>";
+        cout << "</div>";
     }
+    cout << "</div>";
 
     cout << "<p>Maze file '" << mazeFilePath << "' successfully validated!</p>" << endl;
     return maze;
